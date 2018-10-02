@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Visualizing 50 Million Points with D3</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+    
+        .area {
+            fill: steelblue;
+            stroke: steelblue;
+            stroke-width: 0.5;
+            clip-path: url(#clip);
+        }
+    
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            stroke-width: 1.5;
+            clip-path: url(#clip);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>  
+    <h1>Visualizing 50 Million Points with D3</h1>
+    <svg width="980" height="360" id="plot-area"></svg>
+</body>
+<script src="/zoom_transition_plot.js"></script>
+<script>
+    zoom_transition_plot(d3.select("#plot-area"));
+</script>
+</html>
